@@ -4,11 +4,11 @@ const form = document.querySelector('form');
 const promises = [];
 
 form.addEventListener('submit', ev => {
-  const { step, amount, delay, submit } = ev.target.elements;
+  const { step, amount, delay, controls } = ev.target.elements;
 
   ev.preventDefault();
 
-  submit.disabled = true; // avoid unexpected multiple promises creatin
+  controls.disabled = true; // avoid multiple simultaneous promises creation
 
   const stepMs = +step.value;
   const delayMs = +delay.value;
@@ -28,7 +28,7 @@ form.addEventListener('submit', ev => {
   }
 
   Promise.allSettled(promises).then(() => {
-    submit.disabled = false;
+    controls.disabled = false;
     promises.length = 0;
   });
 });
