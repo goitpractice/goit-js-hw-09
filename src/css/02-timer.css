@@ -1,0 +1,51 @@
+.controls {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+input,
+button {
+  font-size: 20px;
+  border: 1px solid #8f8f9d;
+  border-radius: 2px;
+}
+
+button {
+  font-size: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+input:disabled,
+button:disabled {
+  border-color: #ddd;
+  color: #aeaeae;
+  cursor: default;
+}
+
+input#datetime-picker:disabled {
+  /* override flatpickr style for disabled input */
+  cursor: default;
+}
+
+.timer {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial;
+}
+
+.field .value {
+  min-width: 3ch;
+  text-align: center;
+  font-size: 40px;
+}
