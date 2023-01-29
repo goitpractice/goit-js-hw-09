@@ -1,0 +1,2 @@
+let t;const[e,a]=document.querySelectorAll("button");document.body.addEventListener("click",(d=>{"start"in d.target.dataset&&(t=setInterval((()=>document.body.setAttribute("style",`background-color: #${Math.floor(16777215*Math.random()).toString(16)};`)),1e3),e.disabled=!0,a.disabled=!1),"stop"in d.target.dataset&&(clearInterval(t),e.disabled=!1,a.disabled=!0)}));
+//# sourceMappingURL=01-color-switcher.2c333182.js.map
